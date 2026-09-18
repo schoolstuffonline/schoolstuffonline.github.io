@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://mrt1mmy.github.io/schoolstuff/nogames.png">
+    <title>School Stuff</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<iframe
+    id="site"
+    src="https://mrt1mmy.github.io/schoolstuff/index.html"
+    title="School Stuff">
+</iframe>
+
+<script>
+    const iframe = document.getElementById("site");
+
+    window.addEventListener("message", function(event) {
+        if (
+            event.data &&
+            event.data.type === "iframe-link" &&
+            typeof event.data.url === "string"
+        ) {
+            iframe.src = event.data.url;
+        }
+    });
+</script>
+
+</body>
+</html>
