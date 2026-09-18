@@ -3,24 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="https://mrt1mmy.github.io/schoolstuff/nogames.png">
-  <title>School Stuff</title>
+    <link rel="icon" type="image/x-icon" href="https://mrt1mmy.github.io/schoolstuff/nogames.png">
+    <title>School Stuff</title>
+
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrolling */
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
 
-
         iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
             border: none;
+            display: block;
         }
     </style>
 </head>
+
 <body>
-    <iframe src="https://mrt1mmy.github.io/schoolstuff/index.html" title="SchoolStuff"></iframe>
+
+<iframe
+    id="site"
+    src="https://mrt1mmy.github.io/schoolstuff/index.html"
+    title="School Stuff">
+</iframe>
+
+<script>
+    const iframe = document.getElementById("site");
+
+    window.addEventListener("message", function(event) {
+        if (event.data && event.data.type === "loadURL") {
+            iframe.src = event.data.url;
+        }
+    });
+
+    iframe.addEventListener("load", function() {
+        try {
+            const doc = iframe.contentDocument;
+
+            doc.addEventListener("click", function(event) {
+                const link = event.target.closest("a");
+
+                if (!link || !link.href) return;
+
+                event.preventDefault();
+
+                iframe.src = link.href;
+            });
+        } catch (error) {
+            console.log("Cross-origin page. Links must use postMessage.");
+        }
+    });
+</script>
+
 </body>
-</html>inde
+</html>
