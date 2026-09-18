@@ -1,0 +1,191 @@
+
+body {
+  background: #002347;
+}
+
+  p {
+  color: rgb(255, 255, 255);
+    font-family: tahoma;
+}
+
+
+.regularlink {
+  color:blue;
+  text-decoration: underline;
+ background: none;
+ outline: none;
+ border:none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.regularlink:hover {
+  color:blue;
+  text-decoration: underline;
+  background-color:#566951;
+  border-color: #566951;
+}
+  
+
+
+
+a:hover{
+  background-color: rgb(16, 16, 16);
+  border-color:rgb(16, 16, 16);
+}
+h3{
+color:white;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ text-align: center;
+ font-size:2.5em;
+ text-shadow: 0px 0px 5px white;
+}
+
+  
+h6{
+  font-weight: normal;
+  color:rgb(255, 255, 255);
+}
+  
+  h1{
+   text-
+   font-weight: 1000;
+   color:white;
+  text-align: center;
+     font-family: 'Barlow Condensed', sans-serif;
+  }
+  
+
+li{
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  
+}
+
+a{
+  background: #333;
+ color:white;
+  text-decoration: none;
+  display: inline-block;
+  border-color: #333;
+  border-width: 10px;
+  border-style: solid;
+  text-align: center;
+border-radius: 5px;
+}
+
+
+  
+h5{
+  float: right;
+  
+}
+ .centeredtxt {
+    text-align: center; 
+    position: fixed;
+   display: flex;
+   justify-content: center;
+   width: 100vw;
+   z-index: 10000000;
+  
+ 
+ }
+
+   .siteon{
+  background: rgb(100, 100, 100);
+  color:black;
+  text-decoration: none;
+  display: inline-block;
+  border-color: rgb(100, 100, 100);
+  border-width: 10px;
+  border-style: solid;
+  
+  
+}
+.siteon:hover{
+  background-color: rgb(81, 78, 78);
+  border-color:rgb(81, 78, 78);
+
+}
+hr{
+  color: #333;
+  border-color:#333;
+}
+.gamelinks{
+    
+ color:white;
+  text-decoration: none;
+  display: inline-block;
+  
+  
+  text-align: center;
+
+width: 200px;
+height: 200px;
+object-fit: cover;
+
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+
+
+  width: 200px;
+  height: 200px;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+
+
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+
+}
+.gamelinks {
+  display: flex;
+  gap: 16px;             
+  flex-wrap: wrap;       
+  justify-content: center; 
+  max-width: 1920px;      
+  margin: 0 auto;
+}
+
+
+.gamelinks a {
+  width: 240px;            
+  height: 240px;           
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;      
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+   
+       transition:0.3s ease-in-out;
+}
+
+
+.gamelinks img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.gamelinks a:hover img {
+  transform: scale(1.05);
+  transition:0.3s ease-in-out;
+}
+.logo img{
+
+max-width:50% ;
+max-height: 400px;
+padding: 0;
+margin: 0;
+float:inherit;
+}
+.logo {
+display:flex;
+justify-content: center;
+}
